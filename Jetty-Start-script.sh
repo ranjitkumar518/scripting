@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Change to $1 directory where jetty.sh resides
 cd $1
 nohup ./jetty.sh > out.log 2>&1 &
 echo "..............."
