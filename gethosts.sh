@@ -6,6 +6,19 @@ bindir=`dirname $0`
 hier=`cd $bindir/.. && pwd`
 
 hostsfile=$hier/conf/hosts.conf
+
+usage ()
+{
+  echo "gethosts -t host-type"
+  echo "  -t host-type       specifies type of host to run command on (can be repeated)"
+  echo "  -f hosts file      specifies the host to read"
+  echo
+  echo "valid host-types are: " `grep -v '^\s*#' $hostsfile | awk 'NF == 2 {print $2}' | sort -u`
+  echo
+  echo
+}
+
+
 get_cmd_opts () {
     while getopts "t:f:h" OPTION
     do
