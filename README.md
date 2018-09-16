@@ -1,2 +1,2 @@
 # scripting
-shell scripts to start Jboss and Install java
+Shell scripts to perform operations like installing java, starting a service, getting the hosts in a cluster, etc...
