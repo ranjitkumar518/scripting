@@ -1,0 +1,15 @@
+# Run the script after changing the file permissions
+./Draw_Pattern.sh
+Enter Number between (5 to 10) : 6
+.
+. .
+. . .
+. . . .
+. . . . .
+. . . . . .
+. . . . . .
+. . . . .
+. . . .
+. . .
+. .
+.
