@@ -1,4 +1,5 @@
 #!/bin/bash
+# For output refer ./draw-pattern.txt file
 MAX_NO=0
 echo -n "Enter Number between (5 to 10) : "
 read MAX_NO
