@@ -12,7 +12,9 @@ ENV=$1
 AWS_PROFILE=$2
 COMPONENT=$3
 
+## ELB name is combination of Component and environment. EXample: $COMPONENT-$ENV
 echo --- Healthy instances to the ELB $COMPONENT-$ENV ---
+
 aws elb describe-instance-health --profile $AWS_PROFILE \
     --load-balancer-name $COMPONENT-$ENV \
     --query 'InstanceStates[?State==`InService`].[InstanceId,State]' \
