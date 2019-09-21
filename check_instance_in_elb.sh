@@ -3,6 +3,20 @@
 env=$1
 region=$2
 
+if [[ -z "$env" && "$env" = '' ]]
+then
+echo "env is missing"
+echo "./check_instance_in_elb.sh <env> <region> "
+exit -1;
+fi
+
+if [[ -z "$region" && "$region" = '' ]]
+then
+echo "region is missing"
+echo "./check_instance_in_elb.sh <env> <region> "
+exit -1;
+fi
+
 elblist="$component1 $component2 $component3 $component4 $component5 $$component6"
 
 for i in $elblist
