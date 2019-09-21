@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "******** You need GIT and Token access to https://github.intuit.com/ to run this script  ********" | tr '/a-z/' '/A-Z/'
+echo "******** You need GIT and Token access to https://github.abcd.com/ to run this script  ********" | tr '/a-z/' '/A-Z/'
 echo "******** Kindly Make Sure the First Parameter is the BASE branch to which pull request is created ********" | tr '/a-z/' '/A-Z/'
 echo "********Script requires Jq to parse json. To install run: brew install jq ********"
 echo "********Script requires mail utility to send mails********"
@@ -43,7 +43,7 @@ getlog() {
 	while read Line
 	do
 		echo $Line
-		curl -u $USERNAME:$PASSWORD -X GET -H "Content-Type: application/json" https://jira.com/rest/api/latest/issue/$line  > /tmp/jira.json
+		curl -u $USERNAME:$PASSWORD -X GET -H "Content-Type: application/json" https://jira.abcd.com/rest/api/latest/issue/$line  > /tmp/jira.json
 		Jira_Summary=`cat /tmp/jira.json | jq ".fields.summary"`
 		Jira_Assignee=`cat /tmp/jira.json | jq ".fields.assignee.name"`
 		Jira_Fix_Version=`cat /tmp/jira.json | jq ".fields.fixVersions[0].name"`
@@ -114,4 +114,4 @@ print "</TABLE></BODY></HTML>"
 ' ~/output.csv > ~/output.html
 
 echo "******** LOOK FOR FILE output.csv/output.html in home directory ********"
-mail -s "$(echo "Change log between $BASE and $BRANCH for the Targeted Release \nContent-Type: text/html")"  mail_id1@abcdefg.com, mail_id2@abcdefg.com <  ~/output.html
+mail -s "$(echo "Change log between $BASE and $BRANCH for the Targeted Release \nContent-Type: text/html")"  mail_id1@abcd.com, mail_id2@abcd.com <  ~/output.html
