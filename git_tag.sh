@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "******** You need GIT and Token access to https://github.intuit.com/ to run this script  ********" | tr '/a-z/' '/A-Z/'
+echo "******** You need GIT and Token access to https://github.com/ to run this script  ********" | tr '/a-z/' '/A-Z/'
 echo "******** Kindly Make Sure the First Parameter is the TAG & Second Parameter is BRANCH ********" | tr '/a-z/' '/A-Z/'
 echo ""
 
