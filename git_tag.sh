@@ -4,7 +4,7 @@ echo "******** You need GIT and Token access to https://github.intuit.com/ to ru
 echo "******** Kindly Make Sure the First Parameter is the TAG & Second Parameter is BRANCH ********" | tr '/a-z/' '/A-Z/'
 echo ""
 
-ALLOWEDBRANCH="master | develop | integration | e2e | stage | performance" #branches allowed
+ALLOWEDBRANCH="master | develop | e2e | stage | performance" #branches allowed
 TAG=$1
 BRANCH=$2
 DIR=$PWD
