@@ -13,8 +13,8 @@ if [ $# -ne 3 ]
   then
   
     echo "In-correct Arguments supplied."
-    echo "usage: sh icp_autoscale.sh scale-up prf us-west-2"
-    echo "usage: sh icp_autoscale.sh scale-down prf us-west-2"
+    echo "usage: sh env_auto_scale.sh scale-up prf us-west-2"
+    echo "usage: sh env_auto_scale.sh scale-down prf us-west-2"
     scalingType=novaluepassed
 fi
 
