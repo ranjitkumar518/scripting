@@ -30,12 +30,12 @@ set_list_components() {
     echo "Setting component list based on input $SERVICE-$ENV..."
     echo "-------------------------------------------------------------------------------------------------------------------------------------\n\n"
 
-    if [ "$SERVICE" == "webs" ]
+    if [ "$SERVICE" == "web-apps" ]
     then
             COMPONENT_LIST=(webs-app1-$ENV webs-app2-$ENV webs-app1-$ENV)
-    elif [ "$SERVICE" == "micro-service" ]
+    elif [ "$SERVICE" == "microservices" ]
     then
-            COMPONENT_LIST=(webs-appName1-$ENV webs-appName2-$ENV webs-appName3-$ENV)
+            COMPONENT_LIST=(micro-appName1-$ENV micro-appName2-$ENV micro-appName3-$ENV)
     else
             echo "Invalid "
     fi
