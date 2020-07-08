@@ -8,7 +8,7 @@ service=$4
 if [ $# -ne 4 ]
   then
     echo "Invalid arguments. Example::: ./set_waf_alb_flag.sh us-west-2 prf true service_name "
-    echo "Info::: service value must be webs_s1/webs_s2/webs_s3/webs_contingency/icp_services/eos"
+    echo "Info::: service value must be webs_s1/webs_s2/webs_s3/webs_contingency/services"
     echo "Info: To enable pass true. To disable pass false"
 fi
 
